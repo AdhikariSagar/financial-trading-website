@@ -1,18 +1,16 @@
 <x-main-layout>
-    <table class="w-[400px]">
-        <thead>
-            <tr>
-                @foreach ($stockMetaData as $stock)
-                    <th class="text-left">{{ $stock->sector }}</th>
-                @endforeach
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                @foreach ($stockMetaData as $stock)
-                    <td><a href="/stock-details/{{ $stock->symbol }}" class="cursor-pointer hover:text-blue-400">{{ $stock->name }} ({{ $stock->exchange }})</a></td>
-                @endforeach
-            </tr>
-        </tbody>
-    </table>
+    <div class="flex flex-col">
+        <div class="flex">
+            @foreach ($stockMetaData as $stock)
+                <div class="font-semibold flex-1">{{ $stock->sector }}</div>
+            @endforeach
+        </div>
+        <div class="flex">
+            @foreach ($stockMetaData as $stock)
+            <div class="flex-1">
+                <a href="/instrument-details/stock/{{ $stock->symbol }}" class="cursor-pointer hover:text-blue-400">{{ $stock->name }} ({{ $stock->exchange }})</a>
+            </div>
+        @endforeach
+        </div>
+    </div>
 </x-main-layout>
