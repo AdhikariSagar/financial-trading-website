@@ -10,7 +10,7 @@
                 <button onclick="updateChart('3M')" class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">3M</button>
                 <button onclick="updateChart('6M')" class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">6M</button>
                 <button onclick="updateChart('1Y')" class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">1Y</button>
-                <button onclick="updateChart('All')" class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">All</button>
+                <button onclick="updateChart('All')" class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">Alle</button>
             </div>
             <canvas id="gold-price-chart" class="mx-auto" height="600px" width="600px"></canvas>
            

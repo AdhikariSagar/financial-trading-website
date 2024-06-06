@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             allLabels = goldData.map(item => item.dateTime); // Keep raw date strings for better formatting
             allPrices = goldData.map(item => item.endPrice);
+            volume = goldData.map(item=>item.volume);
+
             console.log({ prices: allPrices, labels: allLabels });
 
             const ctx = document.getElementById('gold-price-chart').getContext('2d');
@@ -29,7 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
                         borderColor: 'rgba(75, 192, 192, 1)',
                         borderWidth: 1,
                         fill: true
-                    }]
+                    },
+                    {
+                        label: 'Gold Price (USD)',
+                        data: volume,
+                        backgroundColor: 'rgba(75, 102, 192, 0.2)',
+                        borderColor: 'rgba(75, 152, 202, 1)',
+                        borderWidth: 1,
+                        fill: true
+                    },
+                ]
                 },
                 options: {
                     scales: {

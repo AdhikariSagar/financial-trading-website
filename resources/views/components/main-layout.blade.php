@@ -14,13 +14,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <style>
+         /* Hide scrollbar for Chrome, Safari and Opera */
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .scrollbar-none {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        } 
+    </style>
 </head>
 
-<body class="font-sans antialiased text-black h-[100dvh] w-full overflow-hidden flex flex-col">
+<body class="font-sans antialiased text-black h-[100dvh] w-full flex flex-col relative">
     <!-- Include the header component -->
-   <x-header></x-header>
+   <x-header></x-header> 
     <!-- Main content area -->
-    <div class="flex-1 px-8">
+    <div class="flex-1 mx-4 md:mx-8 lg:mx-32 pt-4 lg:pt-6">
+        {{-- placeholder height --}}
+       <div class="h-16 w-full"></div>
        {{$slot}}
     </div>
     <!-- Include the footer component -->

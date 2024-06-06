@@ -1,0 +1,88 @@
+Selecting Data
+
+    select($columns): Select specific columns.
+    addSelect($columns): Add additional columns to the select clause.
+    from($table): Specify the table to select from.
+    where($column, $operator, $value): Add a basic where clause to the query.
+    orWhere($column, $operator, $value): Add an "or where" clause to the query.
+    whereIn($column, $values): Add a "where in" clause to the query.
+    whereNotIn($column, $values): Add a "where not in" clause to the query.
+    whereNull($column), whereNotNull($column): Add a "where null" or "where not null" clause to the query.
+    whereBetween($column, $min, $max): Add a "where between" clause to the query.
+    groupBy($column): Group the results by a column.
+    having($column, $operator, $value): Add a "having" clause to the query.
+
+Ordering Data
+
+    orderBy($column, $direction): Order the results by a column.
+    latest($column), oldest($column): Order the results by the latest or oldest value of a column.
+    orderByDesc($column), orderByAsc($column): Order the results in descending or ascending order.
+
+Limiting and Pagination
+
+    limit($value): Limit the number of results returned.
+    offset($value): Offset the results by a certain number.
+    take($value), skip($value): Alias for limit and offset.
+    paginate($perPage): Paginate the results.
+
+Joining Tables
+
+    join($table, $first, $operator, $second): Perform a join on the query.
+    leftJoin($table, $first, $operator, $second), rightJoin($table, $first, $operator, $second): Perform left or right joins.
+    crossJoin($table): Perform a cross join.
+
+Aggregates and Grouping
+
+    count($column), max($column), min($column), sum($column), avg($column): Perform aggregate functions.
+    groupBy($column), having($column, $operator, $value): Group and filter aggregated results.
+
+Union, Intersect, and Except
+
+    union($query), unionAll($query): Perform a union operation.
+    intersect($query): Perform an intersect operation.
+    except($query): Perform an except operation.
+
+
+Retrieving Models
+
+    all(): Retrieve all records from the table.
+    find($id): Retrieve a record by its primary key.
+    findOrFail($id): Retrieve a record by its primary key or throw an exception.
+    where($column, $value): Add a basic where clause to the query.
+    first(): Retrieve the first record that matches the query constraints.
+    get(): Retrieve all records that match the query constraints.
+    paginate($perPage): Paginate the result set.
+    count(): Count the number of records in the result set.
+
+Query Builder Methods
+
+    select($columns): Specify columns to select.
+    orderBy($column, $direction): Order the results by a column.
+    groupBy($column): Group the results by a column.
+    limit($limit): Limit the number of results.
+    offset($offset): Offset the results by a certain number.
+    join($table, $first, $operator, $second): Perform a join on the query.
+    whereHas($relation, $callback): Add a constraint based on the existence of a related model.
+
+Modifying Models
+
+    create($attributes): Create a new record in the database.
+    update($attributes): Update the model's attributes in the database.
+    delete(): Delete the model from the database.
+    destroy($ids): Delete records by their primary keys.
+
+Relationship Methods
+
+    belongsTo($related, $foreignKey, $ownerKey): Define a belongs-to relationship.
+    hasOne($related, $foreignKey, $localKey): Define a one-to-one relationship.
+    hasMany($related, $foreignKey, $localKey): Define a one-to-many relationship.
+    belongsToMany($related, $table, $foreignPivotKey, $relatedPivotKey): Define a many-to-many relationship.
+    morphTo(), morphMany(), morphToMany(): Define polymorphic relationships.
+
+Other Useful Methods
+
+    with($relations): Eager load relationships to avoid N+1 query issues.
+    findOrFail($id): Find a model by its primary key or throw an exception.
+    firstOrFail(): Retrieve the first result of the query or throw an exception.
+    exists(): Check if a record exists in the database.
+
