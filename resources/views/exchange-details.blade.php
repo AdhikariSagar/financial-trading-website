@@ -13,7 +13,6 @@
                 <button onclick="updateChart('All')" class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">Alle</button>
             </div>
             <canvas id="gold-price-chart" class="mx-auto" height="600px" width="600px"></canvas>
-           
         </div>
     </div>
     <script src="{{ asset('js/dashboard.js') }}"></script>

@@ -1,5 +1,4 @@
 <x-main-layout>
-    <h1 class="text-2xl">All sector stocks</h1>
     <table class="w-[400px]">
         <thead>
             <tr>
