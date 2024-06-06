@@ -8,6 +8,17 @@ use Illuminate\Http\Request;
 
 class Controller
 {
+    /**
+     * For cryptocurrency view
+     */
+    public function cryptoHome(){
+        $metaData = Metadata::where('type','cryptocurrency')->get();
+        dd($metaData);
+        return view('cryptocurrency', ['metaData'=>$metaData]);
+    }
+    /**
+     * For instrument-details view
+     */
     public function instrumentDetails(Request $request)
     {
         $type = $this->getInstrumentType($request->type);
@@ -31,7 +42,6 @@ class Controller
         } else {
             return redirect()->route('pagenotfound');
         }
-        dd($type, $symbol);
     }
 
     // Helper function to determine the instrument type
