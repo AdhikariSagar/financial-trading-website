@@ -25,13 +25,13 @@
         <div class="mt-4 md:mt-7">{{ $metaData->description ?? '' }}</div>
         <div class="mt-8 w-full flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
             {{-- Graph container --}}
-            <div class="w-full lg:w-[65%]">
-                <div class="w-full h-[600px] overflow-hidden">
-                    <div id="chart-container" width="100%" height="100%"></div>
+            <div class="w-full md:w-[65%]">
+                <div class="w-full h-[300px] md:h-[400px] overflow-hidden">
+                    <div id="chart-container" class="relative  h-[300px] md:h-[400px] w-full"></div>
                 </div>
             </div>
             {{-- Other details --}}
-            <div class="w-full lg:w-[35%] md:space-y-10 md:pt-10">
+            <div class="w-full md:w-[35%] md:space-y-10">
                 @if ($metaData->marketCap)
                     <div>
                         <h1 class="text-gray-700 font-semibold">Market Capitalization Information</h1>
@@ -133,10 +133,16 @@
             }
         }
         console.log(seriesData);
+        const chartContainer = document.getElementById('chart-container');
+        console.log({
+            width: chartContainer.clientWidth,
+            height: chartContainer.clientHeight,
+            // Configure other chart properties
+        })
         // Use the seriesData array to configure and render the chart
-        const chart = LightweightCharts.createChart(document.getElementById('chart-container'), {
-            width: 800,
-            height: 400,
+        const chart = LightweightCharts.createChart(chartContainer, {
+            width: chartContainer.clientWidth,
+            height: chartContainer.clientHeight,
             // Configure other chart properties
         });
 
