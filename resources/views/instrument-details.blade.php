@@ -8,7 +8,18 @@
             <div class="flex items-center mt-1">
                 <span
                     class="h-8 flex items-center leading-none w-fit px-3 pb-1  capitalize rounded-full bg-purple-500 text-white">{{ $metaData->type ?? '' }}</span>
-                <span class="h-2 w-2 bg-gray-400 rounded-full mx-2"></span>
+
+                @if ($exchangeData->isin)
+                    <span class="h-2 w-2 bg-gray-400 rounded-full mx-2"></span>
+                    <span
+                        class="h-8 flex items-center leading-none w-fit px-3 pb-1  capitalize rounded-full bg-slate-200">ISIN:
+                        {{ $exchangeData->isin }}</span>
+                @endif
+                @if ($exchangeData->wpkn)
+                    <span class="h-2 w-2 bg-gray-400 rounded-full mx-2"></span>
+                    <span
+                        class="h-8 flex items-center leading-none w-fit px-3 pb-1  capitalize rounded-full bg-slate-200">{{ $exchangeData->wpkn }}</span>
+                @endif
             </div>
         </div>
         <div class="mt-4 md:mt-7">{{ $metaData->description ?? '' }}</div>
