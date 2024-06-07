@@ -12,15 +12,12 @@ Route::get('/', function(){return redirect(route('stock'));})->name('home');
 Route::get('/stock',[StockController::class,'home'])->name('stock');
 Route::get('/instrument-details/{type}/{symbol}',[Controller::class,'instrumentDetails'])->name('instrument-details');
 Route::get('/cryptocurrency',[Controller::class,'cryptoHome'])->name('cryptocurrency');
-
-Route::get('/etc',function(){ return view('exchage-traded-commodity');})->name('etc');
-Route::get('/etf',function(){ return view('exchange-traded-fund');})->name('etf');
-Route::get('/fund',function(){ return view('fund'); })->name('fund');
-Route::get('/commodity',function(){  return view('commodity'); })->name('commodity');
-Route::get('/mf',function(){ return view('mutual-fund'); })->name('mf');
-Route::get('/index',function(){ return view('index'); })->name('index');
-Route::get('/ethereum', function () {return view('ethereum');})->name('ethereum');
-Route::get('/exchange',[ExchangeController::class,'getAll'])->name('exchange');
+Route::get('/etc',[Controller::class,'etcHome'])->name('etc');
+Route::get('/etf',[Controller::class,'etfHome'])->name('etf');
+Route::get('/fund',[Controller::class,'fundHome'])->name('fund');
+Route::get('/commodity',[Controller::class,'commodityHome'])->name('commodity');
+Route::get('/mf',[Controller::class,'mfHome'])->name('mf');
+Route::get('/index',[Controller::class,'indexHome'])->name('index');
 
 Route::get('/page-not-found', function(){ return view('page-not-found');})->name('pagenotfound');
 

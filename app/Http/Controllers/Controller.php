@@ -8,6 +8,56 @@ use Illuminate\Http\Request;
 
 class Controller
 {
+
+    /**
+     * For etc view
+     */
+    public function etcHome(){
+        $data = Metadata::where('type','exchange traded commodity')->with('marketCap')->get();
+        return view('exchage-traded-commodity', ['data'=>$data]);
+    }
+
+    /**
+     * For etf view
+     */
+    public function etfHome(){
+        $data = Metadata::where('type','exchange traded fund')->with('marketCap')->get();
+        return view('exchange-traded-fund', ['data'=>$data]);
+    }
+
+    /**
+     * For fund view
+     */
+    public function fundHome(){
+        $data = Metadata::where('type','fund')->with('marketCap')->get();
+        return view('fund', ['data'=>$data]);
+    }
+
+    /**
+     * For index view
+     */
+    public function indexHome(){
+        $data = Metadata::where('type','index')->with('marketCap')->get();
+        return view('index', ['data'=>$data]);
+    }
+
+    /**
+     * For Mutual fund view
+     */
+    public function mfHome(){
+        $data = Metadata::where('type','mutual fund')->with('marketCap')->get();
+        return view('mutual-fund', ['data'=>$data]);
+    }
+
+     /**
+     * For Commodity view
+     */
+    public function commodityHome(){
+
+        $data = Exchange::where('type','commodity')->get();
+        return view('commodity', ['data'=>$data]);
+    }
+
     /**
      * For cryptocurrency view
      */
