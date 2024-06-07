@@ -99,6 +99,7 @@
 
         // Define an array to store the candlestick data
         const seriesData = [];
+        const histoGramData = [];
 
         // Iterate over each candlestick data entry
         for (const key in candlestickData) {
@@ -127,6 +128,10 @@
                         low: entry.lowestPrice,
                         close: entry.endPrice
                     });
+                    histoGramData.push({
+                        time: Math.floor(date.getTime() / 1000),
+                        value: entry.volume
+                    });
                 } else {
                     console.warn('Invalid data point:', entry);
                 }
@@ -147,8 +152,11 @@
         });
 
         const candleSeries = chart.addCandlestickSeries();
-
         // Set data for the candlestick series
         candleSeries.setData(seriesData);
+/*         const histogramSeries = chart.addHistogramSeries({
+            color: '#26a69a'
+        });
+        histogramSeries.setData(histoGramData); */
     </script>
 </x-main-layout>

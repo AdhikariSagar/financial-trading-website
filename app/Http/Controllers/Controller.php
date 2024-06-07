@@ -85,7 +85,7 @@ class Controller
 
             $candlestickData = Candle::where('symbol', $symbol)
                 ->orderBy('dateTime', 'asc')
-                ->get(['dateTime', 'startPrice', 'highestPrice', 'lowestPrice', 'endPrice']);
+                ->get();
 
             // Check if any data is found
             if ($metaData || $exchangeData) {
