@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Candle;
 use App\Models\Exchange;
 use App\Models\Metadata;
 use Illuminate\Http\Request;
@@ -82,9 +83,13 @@ class Controller
             // Query to get exchange data where symbol matches
             $exchangeData = Exchange::where('symbol', $symbol)->first();
 
+            $candlestickData = Candle::where('symbol', $symbol)
+                ->orderBy('dateTime', 'asc')
+                ->get(['dateTime', 'startPrice', 'highestPrice', 'lowestPrice', 'endPrice']);
+
             // Check if any data is found
             if ($metaData || $exchangeData) {
-                return view('instrument-details', compact('metaData', 'exchangeData'));
+                return view('instrument-details', compact('metaData', 'exchangeData','candlestickData'));
             } else {
                 return redirect()->route('pagenotfound');
             }

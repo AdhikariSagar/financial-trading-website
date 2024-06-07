@@ -15,25 +15,8 @@
         <div class="mt-8 w-full flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
             {{-- Graph container --}}
             <div class="w-full lg:w-[65%]">
-                <div id="fetchId" data={{ $metaData->symbol ?? '' }}></div>
                 <div class="w-full h-[600px] overflow-hidden">
-                    <div class="flex justify-center space-x-2 mt-4">
-                        <button onclick="updateChart('1D')"
-                            class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">1D</button>
-                        <button onclick="updateChart('5D')"
-                            class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">5D</button>
-                        <button onclick="updateChart('1M')"
-                            class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">1M</button>
-                        <button onclick="updateChart('3M')"
-                            class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">3M</button>
-                        <button onclick="updateChart('6M')"
-                            class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">6M</button>
-                        <button onclick="updateChart('1Y')"
-                            class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">1Y</button>
-                        <button onclick="updateChart('All')"
-                            class="btn w-8 h-6 rounded bg-green-300 hover:bg-green-200 cursor-pointer">Alle</button>
-                    </div>
-                    <canvas id="gold-price-chart" width="100%" height="100%"></canvas>
+                    <div id="chart-container" width="100%" height="100%"></div>
                 </div>
             </div>
             {{-- Other details --}}
@@ -99,5 +82,56 @@
         </div>
     @endif
 
-    <script src="{{ asset('js/dashboard.js') }}"></script>
+    <script>
+        // Retrieve candlestick data from PHP using Blade template syntax
+        const candlestickData = @json($candlestickData);
+
+        // Define an array to store the candlestick data
+        const seriesData = [];
+
+        // Iterate over each candlestick data entry
+        for (const key in candlestickData) {
+            if (candlestickData.hasOwnProperty(key)) {
+                // Access the properties of the candlestick data entry
+                const entry = candlestickData[key];
+
+                // Validate that all necessary properties are not null
+                if (
+                    entry.dateTime &&
+                    entry.startPrice != null &&
+                    entry.highestPrice != null &&
+                    entry.lowestPrice != null &&
+                    entry.endPrice != null
+                ) {
+                    // Create a JavaScript Date object from the dateTime string
+                    const date = new Date(entry.dateTime);
+                    //console.log(entry);
+                    //console.log(date);
+
+                    // Push a new data point to the seriesData array
+                    seriesData.push({
+                        time: Math.floor(date.getTime() / 1000), // Convert date to seconds since UNIX epoch
+                        open: entry.startPrice,
+                        high: entry.highestPrice,
+                        low: entry.lowestPrice,
+                        close: entry.endPrice
+                    });
+                } else {
+                    console.warn('Invalid data point:', entry);
+                }
+            }
+        }
+        console.log(seriesData);
+        // Use the seriesData array to configure and render the chart
+        const chart = LightweightCharts.createChart(document.getElementById('chart-container'), {
+            width: 800,
+            height: 400,
+            // Configure other chart properties
+        });
+
+        const candleSeries = chart.addCandlestickSeries();
+
+        // Set data for the candlestick series
+        candleSeries.setData(seriesData);
+    </script>
 </x-main-layout>
