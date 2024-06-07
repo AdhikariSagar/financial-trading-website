@@ -2,7 +2,7 @@
         <div>
             <div>
                 <span class="text-3xl font-semibold">{{ $metaData->name }}</span>
-                <span class="text-3xl font-thin ml-2">{{ $metaData->ticker }}</span>
+                <span class="text-3xl font-thin text-sm ml-2">{{ $metaData->ticker }}</span>
             </div>
             <div class="flex items-center mt-1">
                 <span
@@ -37,34 +37,55 @@
             </div>
             {{-- Other details --}}
             <div class="w-full lg:w-[35%] md:space-y-10 md:pt-10">
+                @if ($metaData->marketCap)
+                <div>
+                    <h1 class="text-gray-700 font-semibold">Market Capitalization Information</h1>
+                    <div class="pb-2 border-b">
+                        <div>Total market value</div>
+                        <div class="font-thin text-sm">{{ number_format($metaData->marketCap->value, 2) }} {{$metaData->currency}}</div>
+                    </div>
+                    <div class="pb-2 border-b">
+                        <div>Market Dominance</div>
+                        <div class="font-thin text-sm">{{ number_format($metaData->marketCap->dominance, 2) }}%</div>
+                    </div>
+                    <div class="pb-2 border-b">
+                        <div>Fully Diluted Market Cap</div>
+                        <div class="font-thin text-sm">{{$metaData->currency=='EUR'?'€':''}} {{$metaData->currency=='USD'?'$':''}}{{ number_format($metaData->marketCap->diluted, 2) }}</div>
+                    </div>
+                    <div class="pb-2 border-b">
+                        <div>Average</div>
+                        <div class="font-thin text-sm">{{$metaData->currency=='EUR'?'€':''}} {{$metaData->currency=='USD'?'$':''}}{{ number_format($metaData->marketCap->average, 2) }}</div>
+                    </div>
+                </div>
+                @endif
                 <div>
                     <h1 class="text-gray-500">Trading Information</h1>
                     <div class="flex pb-2 border-b justify-between">
                         <div>Previous Close Price</div>
-                        <div class="font-thin"> $424.01</div>
+                        <div class="font-thin text-sm"> $424.01</div>
                     </div>
                     <div class="flex pb-2 border-b justify-between">
                         <div>Previous Close Price</div>
-                        <div class="font-thin"> $424.01</div>
+                        <div class="font-thin text-sm"> $424.01</div>
                     </div>
                     <div class="flex pb-2 border-b justify-between">
                         <div>Previous Close Price</div>
-                        <div class="font-thin"> $424.01</div>
+                        <div class="font-thin text-sm"> $424.01</div>
                     </div>
                 </div>
                 <div>
                     <h1 class="text-gray-500">Key Statistics</h1>
                     <div class="flex pb-2 border-b justify-between">
                         <div>Price/Earnings (Normalized)</div>
-                        <div class="font-thin"> 36.71</div>
+                        <div class="font-thin text-sm"> 36.71</div>
                     </div>
                     <div class="flex pb-2 border-b justify-between">
                         <div>Previous Close Price</div>
-                        <div class="font-thin"> $424.01</div>
+                        <div class="font-thin text-sm"> $424.01</div>
                     </div>
                     <div class="flex pb-2 border-b justify-between">
                         <div>Previous Close Price</div>
-                        <div class="font-thin"> $424.01</div>
+                        <div class="font-thin text-sm"> $424.01</div>
                     </div>
                 </div>
             </div>

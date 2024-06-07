@@ -26,7 +26,7 @@ class Controller
         if ($type !== "unknown") {
             // Query to get metadata where both type and symbol match
             $metaData = Metadata::where('type', $type)
-                ->where('symbol', $symbol)
+                ->where('symbol', $symbol)->with('marketCap')
                 ->first();
 
             // Query to get exchange data where symbol matches
