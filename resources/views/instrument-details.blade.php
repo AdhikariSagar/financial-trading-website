@@ -6,11 +6,11 @@
             </div>
             <div class="flex items-center mt-1">
                 <span
-                    class="h-8 flex items-center leading-none w-fit px-3 rounded-full bg-purple-600 text-white">Stock</span>
+                    class="h-8 flex items-center leading-none w-fit px-3 pb-1  capitalize rounded-full bg-purple-500 text-white">{{$metaData->type}}</span>
                 <span class="h-2 w-2 bg-gray-400 rounded-full mx-2"></span>
             </div>
         </div>
-        <div>{{ $metaData->description }}</div>
+        <div class="mt-4 md:mt-7">{{ $metaData->description }}</div>
         <div class="mt-8 h-full w-full flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
             {{-- Graph container --}}
             <div class="w-full lg:w-[65%]">

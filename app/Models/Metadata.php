@@ -86,4 +86,9 @@ class Metadata extends Model
     {
         return $this->hasOne(Statistic::class);
     }
+
+    public function exchange()
+    {
+        return $this->hasOne(Exchange::class, 'symbol', 'symbol');
+    }
 }

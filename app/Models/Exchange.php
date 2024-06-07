@@ -33,4 +33,9 @@ class Exchange extends Model
         'segmentNameExchange',
     ];
 
+    public function metadata()
+    {
+        return $this->belongsTo(Metadata::class, 'symbol', 'symbol');
+    }
+
 }

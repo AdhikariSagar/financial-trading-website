@@ -12,8 +12,7 @@ class Controller
      * For cryptocurrency view
      */
     public function cryptoHome(){
-        $metaData = Metadata::where('type','cryptocurrency')->get();
-        dd($metaData);
+        $metaData = Metadata::where('type','cryptocurrency')->with('marketCap')->get();
         return view('cryptocurrency', ['metaData'=>$metaData]);
     }
     /**
