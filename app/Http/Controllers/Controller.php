@@ -6,9 +6,16 @@ use App\Models\Candle;
 use App\Models\Exchange;
 use App\Models\Metadata;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\Cast\Double;
 
 class Controller
 {
+    /**
+     * For home view
+     */
+    public function home(){
+        return view('home',['data'=>'hi home']);
+    }
 
     /**
      * For etc view
@@ -86,10 +93,27 @@ class Controller
             $candlestickData = Candle::where('symbol', $symbol)
                 ->orderBy('dateTime', 'asc')
                 ->get();
+            // get required values  
+            $latestValue = $candlestickData->last();
+            $startPrice = $latestValue->startPrice;
+            $closePrice = $latestValue->endPrice;
 
+            //Calculate the changes
+            $diffChange = $closePrice - $startPrice;
+            $diffChangePer = ($diffChange/$startPrice)*100;
+
+            // put all values into array
+            $latestCandle=[];
+            $latestCandle["diff"]=number_format($diffChange, 2);;
+            $latestCandle["diffChangePer"]=number_format($diffChangePer, 2);
+            $latestCandle["dateTime"]=date("M j, Y g:ia", strtotime($latestValue->dateTime));
+            $latestCandle["currency"]=$latestValue->currency;
+
+            //dd($latestCandle);
+            
             // Check if any data is found
             if ($metaData || $exchangeData) {
-                return view('instrument-details', compact('metaData', 'exchangeData','candlestickData'));
+                return view('instrument-details', compact('metaData', 'exchangeData','candlestickData','latestCandle'));
             } else {
                 return redirect()->route('pagenotfound');
             }

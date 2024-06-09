@@ -6,7 +6,7 @@ use App\Http\Controllers\ExchangeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\StockController;
 
-Route::get('/', function(){return redirect(route('stock'));})->name('home');
+Route::get('/', [Controller::class,'home'])->name('home');
 
 // Views
 Route::get('/stock',[StockController::class,'home'])->name('stock');

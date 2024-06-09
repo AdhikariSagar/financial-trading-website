@@ -2,12 +2,12 @@
     @if ($metaData)
         <div class="mt-4 bg-slate-100 p-3">
             <div>
-                <span class="text-3xl font-semibold">{{ $metaData->name ?? '' }}</span>
+                <span class="text-xl font-semibold">{{ $metaData->name ?? '' }}</span>
                 <span class="font-thin text-sm ml-2">{{ $metaData->ticker ?? '' }}</span>
             </div>
-            <div class="flex items-center mt-1">
+            <div class="flex items-center mt-1 text-sm">
                 <span
-                    class="h-8 flex items-center leading-none w-fit px-3 pb-1  capitalize rounded-full bg-purple-500 text-white">{{ $metaData->type ?? '' }}</span>
+                    class="h-5 flex items-center leading-none w-fit px-2 pb-1  capitalize rounded-full bg-purple-500 text-white">{{ $metaData->type ?? '' }}</span>
 
                 @if ($exchangeData->isin)
                     <span class="h-2 w-2 bg-gray-400 rounded-full mx-2"></span>
@@ -20,6 +20,13 @@
                     <span
                         class="h-8 flex items-center leading-none w-fit px-3 pb-1  capitalize rounded-full bg-slate-200">{{ $exchangeData->wpkn }}</span>
                 @endif
+                
+            </div>
+            <div class="text-sm text-gray-400 flex item-center mt-1 space-x-2">
+                <span>As of {{$latestCandle['dateTime']}}</span>
+                <span class="{{$latestCandle['diff']>0 ? 'text-green-500' : 'text-red-600'}}">{{$latestCandle['diff']>0 ? '+' : ''}}{{$latestCandle['diff']}} {{$latestCandle['currency']}}</span>
+                <span class="{{$latestCandle['diffChangePer']>0 ? 'text-green-500' : 'text-red-600'}}">({{$latestCandle['diffChangePer']>0 ? '+' :''}}{{$latestCandle['diffChangePer']}}%)</span>
+                
             </div>
         </div>
         <div class="mt-4 md:mt-7">{{ $metaData->description ?? '' }}</div>
