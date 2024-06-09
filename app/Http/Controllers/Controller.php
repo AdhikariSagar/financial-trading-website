@@ -14,7 +14,10 @@ class Controller
      * For home view
      */
     public function home(){
-        return view('home',['data'=>'hi home']);
+        $allMetaData = Metadata::with('exchange')->get();
+        $data2="hello";
+        $data3="hello2";
+        return view('home',compact('allMetaData','data2','data3'));
     }
 
     /**

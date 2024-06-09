@@ -48,13 +48,14 @@
         <div class="w-full md:w-[35%] md:space-y-10">
             {{-- List of trades --}}
             <div class="p-2 border border-gray-500 rounded-md space-y-2">
+                @foreach ($allMetaData as $item )
                 <div class="w-full flex flex-row justify-between items-center p-2 border-b border-gray-400">
                     <div class="flex flex-row items-center space-x-4">
                         <img class="h-12 w-12 rounded-full" src="{{ asset('img/bitcoin.png') }}" alt="Bitcoin">
                         <div>
-                            <a href="/instrument-details/cryptocurrency/"
-                                class="font-semibold cursor-pointer hover:text-blue-400">idifid</a>
-                            <p class="text-neutral-700 leading-none">Crypto</p>
+                            <a href="#"
+                                class="font-semibold cursor-pointer hover:text-blue-400 max-w-[100px] overflow-hidden"><span>{{$item->symbol}}</span></a>
+                            <p class="text-neutral-700 leading-none">{{$item->ticker}}</p>
                         </div>
                     </div>
                     <div>
@@ -64,54 +65,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-full flex flex-row justify-between items-center p-2 border-b border-gray-400">
-                    <div class="flex flex-row items-center space-x-4">
-                        <img class="h-12 w-12 rounded-full" src="{{ asset('img/bitcoin.png') }}" alt="Bitcoin">
-                        <div>
-                            <a href="/instrument-details/cryptocurrency/"
-                                class="font-semibold cursor-pointer hover:text-blue-400">idifid</a>
-                            <p class="text-neutral-700 leading-none">Crypto</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p>test</p>
-                        <p class="{{ true ? 'text-red-400' : 'text-green-400 text-right' }} leading-none">
-                            test%
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full flex flex-row justify-between items-center p-2 border-b border-gray-400">
-                    <div class="flex flex-row items-center space-x-4">
-                        <img class="h-12 w-12 rounded-full" src="{{ asset('img/bitcoin.png') }}" alt="Bitcoin">
-                        <div>
-                            <a href="/instrument-details/cryptocurrency/"
-                                class="font-semibold cursor-pointer hover:text-blue-400">idifid</a>
-                            <p class="text-neutral-700 leading-none">Crypto</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p>test</p>
-                        <p class="{{ true ? 'text-red-400' : 'text-green-400 text-right' }} leading-none">
-                            test%
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full flex flex-row justify-between items-center p-2 border-b border-gray-400">
-                    <div class="flex flex-row items-center space-x-4">
-                        <img class="h-12 w-12 rounded-full" src="{{ asset('img/bitcoin.png') }}" alt="Bitcoin">
-                        <div>
-                            <a href="/instrument-details/cryptocurrency/"
-                                class="font-semibold cursor-pointer hover:text-blue-400">idifid</a>
-                            <p class="text-neutral-700 leading-none">Crypto</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p>test</p>
-                        <p class="{{ true ? 'text-red-400' : 'text-green-400 text-right' }} leading-none">
-                            test%
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 </x-main-layout>
