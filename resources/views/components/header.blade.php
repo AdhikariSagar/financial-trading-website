@@ -21,7 +21,7 @@
             <!-- Primary Nav -->
             <div class="flex flex-no-wrap whitespace-nowrap items-center space-x-1">
                 <x-nav-links href="/stock" :active="request()->is('stock')">Stock</x-nav-links>
-                <x-nav-links href="/cryptocurrency" :active="request()->is('cryptocurrency')">Crypto</x-nav-links>
+                <x-nav-links href="/crypto" :active="request()->is('crypto')">Crypto</x-nav-links>
                 <x-nav-links href="/etc" :active="request()->is('etc')">ETCs</x-nav-links>
                 <x-nav-links href="/etf" :active="request()->is('etf')">ETFs</x-nav-links>
                 <x-nav-links href="/fund" :active="request()->is('fund')">Fund</x-nav-links>
