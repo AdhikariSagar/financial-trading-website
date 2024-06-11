@@ -1,6 +1,6 @@
 <!-- resources/views/components/header.blade.php -->
 
-<div class="bg-slate-300 shadow-sm px-4 md:px-8 lg:px-32 fixed w-full top-1 left-0 z-10">
+<div class="bg-slate-200 shadow-sm px-4 md:px-8 lg:px-32 fixed w-full top-1 left-0 z-10">
     <!-- Website Name -->
     <div class="flex items-center justify-center pt-1">
         <a href="/" class="text-2xl md:text-3xl font-bold text-red-500 hover:text-gray-700">
