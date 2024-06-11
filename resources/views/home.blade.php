@@ -1,5 +1,4 @@
 <x-main-layout>
-    </p>
     <div class="mt-8 w-full flex flex-row space-y-4 md:flex-row md:space-x-4 md:space-y-0">
         {{-- Left container --}}
         <div class="w-full md:w-[65%]">
@@ -8,103 +7,102 @@
             <div class="bg-slate-200 p-4 border border-gray-300 rounded-md">
                 <div class="text-black-500 text-lg font-bold mb-4">Meistgelesene News</div>
                 <ul class="space-y-2">
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>26.05.</span>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100  even:bg-white ">
+                        <span>5:30</span>
                         <a href="#" class="hover:text-blue-400">Nel Asa-Aktie: 11 Milliarden!</a>
                         <span>Bernd Wünsche</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>15.05.</span>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>7:20</span>
                         <a href="#" class="hover:text-blue-400">Nel Asa-Aktie: Ende!</a>
                         <span>Bernd Wünsche</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>25.05.</span>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>8:05</span>
                         <a href="#" class="hover:text-blue-400">NEL ASA-Aktie: Gerüchte über eine Übernahme?</a>
                         <span>Stefan Salomon</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>03.06.</span>
-                        <a href="#" class="hover:text-blue-400">Plug Power-Aktie: 2,4 Milliarden Dollar!</a>
-                        <span>Bernd Wünsche</span>
-                    </li>
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>24.05.</span>
-                        <a href="#" class="hover:text-blue-400">BYD-Aktie: Fast 17!</a>
-                        <span>Bernd Wünsche</span>
-                    </li>
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>01.06.</span>
-                        <a href="#" class="hover:text-blue-400">Nel Asa-Aktie: Der große Deal!</a>
-                        <span>Bernd Wünsche</span>
-                    </li>
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>Mo</span>
-                        <a href="#" class="hover:text-blue-400">BYD-Aktie: Endlich Dividende!</a>
-                        <span>Dr. Bernd Heim</span>
-                    </li>
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>26.05.</span>
-                        <a href="#" class="hover:text-blue-400">NEL ASA-Aktie: Einmal verdoppeln bitte?</a>
-                        <span>Stefan Salomon</span>
-                    </li>
-                    <li class="flex justify-between items-center py-2">
-                        <span>So</span>
-                        <a href="#" class="hover:text-blue-400">Nel Asa-Aktie: 13 - ein Knall!</a>
-                        <span>Bernd Wünsche</span>
-                    </li>
-                    <!-- Additional News -->
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>14:16</span>
-                        <a href="#" class="hover:text-blue-400">Hensoldt-Aktie: Kein gutes Zeichen!</a>
-                        <span>Alexander Hirschler</span>
-                    </li>
-                    <li class="flex justify-between items-center border-b py-2">
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
                         <span>10:05</span>
                         <a href="#" class="hover:text-blue-400">Plug Power-Aktie: Pleite?</a>
                         <span>Stefan Salomon</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>09:50</span>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>11:50</span>
                         <a href="#" class="hover:text-blue-400">BYD-Aktie: Jetzt geht es Schlag auf Schlag!</a>
                         <span>Achim Graf</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
                         <span>13:57</span>
                         <a href="#" class="hover:text-blue-400">Nel Asa-Aktie: Ausverkauf!?</a>
                         <span>Bernd Wünsche</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
-                        <span>09:31</span>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>19:31</span>
                         <a href="#" class="hover:text-blue-400">Wo bleibt der entscheidende Impuls?</a>
                         <span>Stefan Salomon</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>20:06</span>
+                        <a href="#" class="hover:text-blue-400">Plug Power-Aktie: 2,4 Milliarden Dollar!</a>
+                        <span>Bernd Wünsche</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>So</span>
+                        <a href="#" class="hover:text-blue-400">Nel Asa-Aktie: 13 - ein Knall!</a>
+                        <span>Bernd Wünsche</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>Mo</span>
+                        <a href="#" class="hover:text-blue-400">BYD-Aktie: Endlich Dividende!</a>
+                        <span>Dr. Bernd Heim</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>24.05.</span>
+                        <a href="#" class="hover:text-blue-400">BYD-Aktie: Fast 17!</a>
+                        <span>Bernd Wünsche</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>01.05.</span>
+                        <a href="#" class="hover:text-blue-400">Nel Asa-Aktie: Der große Deal!</a>
+                        <span>Bernd Wünsche</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>16.06.</span>
+                        <a href="#" class="hover:text-blue-400">NEL ASA-Aktie: Einmal verdoppeln bitte?</a>
+                        <span>Stefan Salomon</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
+                        <span>18.06</span>
+                        <a href="#" class="hover:text-blue-400">Hensoldt-Aktie: Kein gutes Zeichen!</a>
+                        <span>Alexander Hirschler</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
                         <span>09:48</span>
                         <a href="#" class="hover:text-blue-400">Wo sollen die guten Nachrichten herkommen?</a>
                         <span>Stefan Salomon</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
                         <span>12:30</span>
                         <a href="#" class="hover:text-blue-400">Vinci-Aktie: Ein großer Rückschlag!</a>
                         <span>Alexander Hirschler</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
                         <span>14:35</span>
                         <a href="#" class="hover:text-blue-400">Uranium Energy-Aktie: Strahlt sie nicht mehr?</a>
                         <span>Peter Wolf-Karnitschnig</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
                         <span>09:45</span>
                         <a href="#" class="hover:text-blue-400">TUI-Aktie: Auf Einkaufstour!</a>
                         <span>Andreas Göttling-Daxenbichler</span>
                     </li>
-                    <li class="flex justify-between items-center border-b py-2">
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
                         <span>15:30</span>
-                        <a href="#" class="hover:text-blue-400">Wasserstoff-Aktien: SFC Energy klettert weiter, Nel ASA zeigt sich stabil und bei Plug Power leck...</a>
-                        <span>Andreas Göttling-Daxenbichler</span>
+                        <a href="#" class="hover:text-blue-400">Wasserstoff-Aktien: SFC Energy klettert weiter...</a>
+                        <span>Andreas Zimmerman</span>
                     </li>
-                    <li class="flex justify-between items-center py-2">
+                    <li class="flex justify-between items-center border-b py-2 px-3 border-gray-300 rounded-md odd:bg-gray-100 even:bg-white">
                         <span>10:47</span>
                         <a href="#" class="hover:text-blue-400">Nvidia-Aktie: Das war und ist das Ziel!</a>
                         <span>Stefan Salomon</span>
@@ -119,6 +117,7 @@
             
             <div class="bg-slate-200 p-2 border border-gray-300 rounded-md space-y-2">
                 <div class="text-black-500 text-lg font-bold ">Top Meistgesuchte Aktien</div>
+                <!-- Top Meistgesuchte Aktien list items -->
                 @foreach ($allMetaData as $index =>$item )
                 <div class="w-full flex flex-row justify-between items-center p-2 border-b border-gray-400">
                     <div class="flex flex-row items-center space-x-4">
@@ -144,4 +143,5 @@
                 @endforeach
             </div>
         </div>
+    </div>
 </x-main-layout>

@@ -1,8 +1,8 @@
 <x-main-layout>
-    <div class="flex flex-col">
+    <div class="flex flex-col bg-blue-200 p-10 rounded-lg shadow-md">
         <div class="flex">
             @foreach ($data as $stock)
-                <div class="font-semibold flex-1">{{ $stock->sector }}</div>
+                <div class="font-bold text-lg flex-1">{{ $stock->sector }}</div>
             @endforeach
         </div>
         <div class="flex">

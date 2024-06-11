@@ -4,11 +4,8 @@
 </x-main-layout> --}}
 <x-main-layout>
     <div class="w-full">
-        <div class="bg-slate-300 overflow-hidden shadow-xl sm:rounded-lg">
+        <div class="bg-blue-200 overflow-hidden shadow-xl sm:rounded-lg">
             <div class="flex flex-col py-2 px-3 ml-2">
-                <div class="text-sm font-bold mt-2"> <!-- Small div -->
-                    start
-                </div>
                 <div class="text-2xl font-bold mt-2"> <!-- Small div -->
                     Kryptowährungen
                 </div>
@@ -42,6 +39,7 @@
         <div class="space-y-3 md:space-y-6 mt-3 md:mt-6 max-w-sm">
             @if ($metaData->isNotEmpty())
                 @foreach ($metaData as $data)
+                <div class="font-bold text-lg flex-1">{{ $data->sector }}</div>
                     <div class="w-full flex flex-row justify-between items-center  rounded-md bg-slate-200 shadow-b p-2">
                         <div class="flex flex-row items-center space-x-4">
                             <img class="h-14 w-14 rounded-full" src="{{ asset('img/bitcoin.png') }}" alt="Bitcoin">

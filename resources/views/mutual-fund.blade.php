@@ -1,7 +1,7 @@
 <x-main-layout>
     <div>
-        <h1 class="text-3xl font-medium">List of Funds</h1>
-        <div class="mt-6 space-y-6">
+        <h1 class=" text-slate-600 text-3xl font-bold">Mutual Fund</h1>
+        <div class="mt-6 space-y-6 bg-blue-200 p-10 rounded-lg shadow-md">
             @foreach ($data as $item)
                 <div class="w-full max-w-md p-2 bg-slate-200 shadow-b rounded-md">
                     <a href="/instrument-details/mf/{{ $item->symbol }}"
