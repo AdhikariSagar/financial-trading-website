@@ -46,7 +46,7 @@
                         <div class="flex flex-row items-center space-x-4">
                             <img class="h-14 w-14 rounded-full" src="{{ asset('img/bitcoin.png') }}" alt="Bitcoin">
                             <div>
-                                <a href="/instrument-details/cryptocurrency/{{ $data->symbol }}" class="font-semibold cursor-pointer hover:text-blue-400">{{ $data->name }}</a>
+                                <a href="/instrument-details/crypto/{{ $data->symbol }}" class="font-semibold cursor-pointer hover:text-blue-400">{{ $data->name }}</a>
                                 <p class="text-xs px-2 leading-none pb-2 pt-1 bg-slate-300 rounded-full w-fit">Crypto</p>
                             </div>
                         </div>
