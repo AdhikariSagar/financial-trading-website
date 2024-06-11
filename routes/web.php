@@ -9,9 +9,9 @@ use App\Http\Controllers\StockController;
 Route::get('/', [Controller::class,'home'])->name('home');
 
 // Views
-Route::get('/stock',[StockController::class,'home'])->name('stock');
+Route::get('/stock',[Controller::class,'stockHome'])->name('stock');
 Route::get('/instrument-details/{type}/{symbol}',[Controller::class,'instrumentDetails'])->name('instrument-details');
-Route::get('/cryptocurrency',[Controller::class,'cryptoHome'])->name('cryptocurrency');
+Route::get('/crypto',[Controller::class,'cryptoHome'])->name('crypto');
 Route::get('/etc',[Controller::class,'etcHome'])->name('etc');
 Route::get('/etf',[Controller::class,'etfHome'])->name('etf');
 Route::get('/fund',[Controller::class,'fundHome'])->name('fund');

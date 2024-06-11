@@ -4,7 +4,7 @@
         <div class="mt-6 space-y-6">
             @foreach ($data as $item)
                 <div class="w-full max-w-md p-2 bg-slate-200 shadow-b rounded-md">
-                    <a href="/instrument-details/mutual-fund/{{ $item->symbol }}"
+                    <a href="/instrument-details/mf/{{ $item->symbol }}"
                         class="cursor-pointer hover:text-blue-400 font-semibold">{{ $item->name }}</a>
                     <div class="text-neutral-700">ISIN: {{ $item->isin }}</div>
                 </div>
