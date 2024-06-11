@@ -91,4 +91,8 @@ class Metadata extends Model
     {
         return $this->hasOne(Exchange::class, 'symbol', 'symbol');
     }
+    public function candle()
+    {
+        return $this->hasOne(Candle::class, 'symbol', 'symbol');
+    }
 }

@@ -20,4 +20,9 @@ class Candle extends Model
         'candleType',
         'currency',
     ];
+    public function metadata()
+    {
+        return $this->belongsTo(Metadata::class, 'symbol', 'symbol');
+    }
+
 }
