@@ -38,18 +38,6 @@ jobs:
     - name: Wait for MySQL
       run: sleep 10
 
-    - name: Run tests
-      env:
-        DB_CONNECTION: mysql
-        DB_HOST: 127.0.0.1
-        DB_PORT: 3307
-        DB_DATABASE: financialtrend
-        DB_USERNAME: root
-        DB_PASSWORD: root
-      run: |
-        php artisan config:cache
-        php artisan test || (cat storage/logs/laravel.log && exit 1)
-
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
   deploy:
