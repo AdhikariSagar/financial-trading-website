@@ -8,6 +8,7 @@ use App\Http\Controllers\StockController;
 
 Route::get('/', [Controller::class,'home'])->name('home');
 
+
 // Views
 Route::get('/stock',[Controller::class,'stockHome'])->name('stock');
 Route::get('/instrument-details/{type}/{symbol}',[Controller::class,'instrumentDetails'])->name('instrument-details');
