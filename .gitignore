@@ -4,7 +4,7 @@
 /public/hot
 /public/storage
 /storage/*.key
-/vendor
+#/vendor
 #.env
 .env.backup
 .env.production
@@ -18,9 +18,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-
-# Ignore the vendor directory, which contains installed packages
-/vendor
 
 # Ignore the storage directory, which contains generated files such as logs and cache
 /storage
