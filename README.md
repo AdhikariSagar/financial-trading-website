@@ -64,7 +64,7 @@ This project is a web application designed to display financial instruments with
 - **Database:** MySQL 8.0+
 - **Dependencies:**
   - Composer
-  - tinker
+  - Tinker
 
 ## Installation
 
@@ -122,14 +122,14 @@ Before you begin, ensure you have the following installed:
 
 If you need to refresh the database and run the seeders, you can do it in one step:
 **Refresh the Database and Run Seeders:**
-   ```bash
-    php artisan migrate:refresh --seed
-   ```
-Additional Notes
-    * Environment Variables: Make sure your .env file is correctly set up with all necessary configurations.
-    * Logging: Check the storage/logs/laravel.log file for any errors or issues.
-    * Using MySQL Workbench or Similar Tools: If you prefer a GUI tool to manage your MySQL database, you can use MySQL Workbench or any other MySQL management tool to interact with your database.
-    
+     ```bash
+        php artisan migrate:refresh --seed
+    ```
+## Additional Notes
+* Environment Variables: Make sure your .env file is correctly set up with all necessary configurations.
+* Logging: Check the storage/logs/laravel.log file for any errors or issues.
+* Using MySQL Workbench or Similar Tools: If you prefer a GUI tool to manage your MySQL database, you can use MySQL Workbench or any other MySQL management tool to interact with your database.
+
     
 ## Contributing
 
