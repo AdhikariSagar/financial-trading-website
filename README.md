@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel# Laravel Project
+## Laravel Project
 
 Welcome to our Laravel project! This README will guide you through setting up and running the application, including project information, technical specifications, and detailed instructions for installation and execution.
 
@@ -26,24 +26,7 @@ Welcome to our Laravel project! This README will guide you through setting up an
 
 ### Overview
 
-This project is a web application designed to display financial instruments with an optimal UI/UX design. The financial instruments are provided in three unique JSON files with different data structures: `exchange.json`, `metadata.json`, and `candle.json`. Each JSON file contains data for various types of financial instruments, including:
-
-- Stock
-- Cryptocurrency
-- Exchange Traded Commodity
-- Exchange Traded Fund
-- Fund
-- Index
-- Commodity
-- Mutual Fund
-
-The unique identifier for each financial instrument can be either the symbol or the ISIN (International Securities Identification Number).
-
-### Features
-- It is built using the Laravel framework, providing a robust and scalable solution for web development.
-- **Data Integration:** Import and process data from three JSON files with distinct formats.
-- **Financial Instruments Display:** Show detailed information for various types of financial instruments.
-- **Responsive Design:** Ensure the application is usable across different devices with a focus on a great user experience.
+This project is a web application designed to display financial instruments with an optimal UI/UX design. The financial instruments are provided in three unique JSON files with different data structures: `exchange.json`, `metadata.json`, and `candle.json`. Each JSON file contains data for various types of financial instruments:
 
 ### JSON Files
 
@@ -66,6 +49,12 @@ The unique identifier for each financial instrument can be either the symbol or 
 
 - **Symbol:** A shorthand representation of the financial instrument, often used in trading.
 - **ISIN:** A 12-character alphanumeric code that uniquely identifies a specific financial instrument.
+  
+### Features
+- It is built using the Laravel framework, providing a robust and scalable solution for web development.
+- **Data Integration:** Import and process data from three JSON files with distinct formats.
+- **Financial Instruments Display:** Show detailed information for various types of financial instruments.
+- **Responsive Design:** Ensure the application is usable across different devices with a focus on a great user experience.
 
 
 ## Technical Specifications
@@ -100,17 +89,18 @@ Before you begin, ensure you have the following installed:
     ```
 
 3.  **Copy the .env.example file:**
-   ```bash
+    ```bash
     cp .env.example .env
-   ```
-- use Powershell for Window
+    ```
+    - use Powershell for Window
+      
 4.  **Generate an application key:**
-   ```bash
+    ```bash
     php artisan key:generate
-   ```
+    ```
 5.  **Configure your MySQL database:**
-   - Open the .env file in your project root directory and update the following lines with your MySQL credentials:
-   ```dotenv
+    - Open the .env file in your project root directory and update the following lines with your MySQL credentials:
+    ```dotenv
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
@@ -118,17 +108,17 @@ Before you begin, ensure you have the following installed:
     DB_USERNAME=[your_database_username]
     DB_PASSWORD=[your_database_password]
 
-   ```
+    ```
 6.  **Run database migrations::**
-   ```bash
+    ```bash
     php artisan migrate
-   ```
+    ```
 7.  **Run the Application:**
    Once you have completed the installation steps above, you can run the Laravel development server using the following command:
-   ```bash
+    ```bash
     php artisan serve
-   ```
-Refreshing the Database and Running Seeders
+    ```
+### Refreshing the Database and Running Seeders
 
 If you need to refresh the database and run the seeders, you can do it in one step:
 **Refresh the Database and Run Seeders:**
