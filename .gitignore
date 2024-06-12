@@ -4,14 +4,14 @@
 /public/hot
 /public/storage
 /storage/*.key
-#/vendor
+/vendor
 #.env
 .env.backup
 .env.production
 .phpactor.json
 .phpunit.result.cache
-#Homestead.json
-#Homestead.yaml
+Homestead.json
+Homestead.yaml
 auth.json
 npm-debug.log
 yarn-error.log
