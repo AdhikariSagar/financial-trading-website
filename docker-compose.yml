@@ -1,0 +1,28 @@
+services:
+
+ #Database Service
+  db:
+    image : mysql
+    container_name : mysql
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    ports:
+      - "3277:3306"
+    environment:
+      MYSQL_DATABASE: financialtrend
+      MYSQL_ROOT_PASSWORD: root
+
+  # Application Service
+   # Application Service
+  app:
+    container_name: LARAVEL
+    build: 
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/var/www
+    ports:
+      - "9000:9000"
+    working_dir: /var/www
+
+
+  
