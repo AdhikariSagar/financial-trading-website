@@ -18,6 +18,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+.pdf
 
 # Ignore the storage directory, which contains generated files such as logs and cache
 /storage
